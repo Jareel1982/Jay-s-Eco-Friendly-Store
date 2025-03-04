@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay's Eco-Friendly Products</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: yellowgreen;
+            text-align: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "Jay's Eco Friendly Store";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.2); 
+            z-index: -1;
+            white-space: nowrap;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .product span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #388E3C;
+        }
+
+        #checkout-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        #cart-items {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        #total-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        #thank-you-message {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><strong>Jay's Eco Friendly Store</strong></h1>
+        <img src="Eco Image.jpeg" height="200" Width="250" alt="Eco Friendly Store Logo">
+        <p class="store-slogan"><u><i><strong>Sustainable Choices, Greener Future!</strong></i></u></p>
+        <nav>
+            <a href="file:///C:/Users/Jareel/Downloads/Individual_Assessment%232_Login.html?">Login Page</a> |
+            <a href="file:///C:/Users/Jareel/Downloads/Individual_Assessment%232_Products.html">Products</a> | 
+            <a href="file:///C:/Users/Jareel/Downloads/Individual_Assessment%232_Products.html"> Services</a> | 
+            <a href="file:///C:/Users/Jareel/Downloads/Individual_Assesment%232_Invoice.html">Invoice</a> | 
+            <a href="file:///C:/Users/Jareel/Downloads/Individual_Assessment%232_Aboutus.html">About Us</a>
+        </nav>
+    </header>
+
+    <section class="product-container"> 
+        <h1 style="text-align: center;">Products: </h1>
+        <div class="product">
+            <img src="WashingSoap.jpeg" height="200" alt="Eco-Friendly Washing Soap">
+            <h2>Eco-Friendly Washing Soap</h2>
+            <p>Gentle on skin and the environment, biodegradable formula. Leave your clothes smelling like freshly new Dasies </p>
+            <span>$5.99</span>
+            <button onclick="addToCart('Eco-Friendly Washing Soap', 5.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Bamboo.jpg" alt="Bamboo Toothpaste">
+            <h2>Bamboo Toothpaste</h2>
+            <p>Environment friendly made with all Natural ingredients, fluoride-free, sustainable packaging.</p>
+            <span>$7.49</span>
+            <button onclick="addToCart('Bamboo Toothpaste', 7.49)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="WaterBottle.jpeg" alt="Reusable Water Bottle">
+            <h2>Reusable Water Bottle</h2>
+            <p>Durable stainless stainlesssteel, keeps drinks hot or cold for hours, and is forever reusable. </p>
+            <span>$12.99</span>
+            <button onclick="addToCart('Reusable Water Bottle', 12.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="ShoppingBag.jpeg" alt="Reusable Shopping Bag">
+            <h2>Reusable Shopping Bag</h2>
+            <p>Stylish, foldable, and made from recycled materials. Other plastic bags have a short lifespan, but not these, these are made from the best sikly and durable materials, making them strong and reliable </p>
+            <span>$3.99</span>
+            <button onclick="addToCart('Reusable Shopping Bag', 3.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Skincare.jpeg" alt="Plant-Based Skincare">
+            <h2>Plant-Based Skincare</h2>
+            <p>Hydrating and nourishing skincare made from organic ingredients.</p>
+            <ol>
+                Coconut Oil 
+                Aloe Vera 
+                Shea Butter 
+                Tea Tree 
+                Etc. 
+            </ol>
+            <span>$15.99</span>
+            <button onclick="addToCart('Plant-Based Skincare', 15.99)">Add to Cart</button>
+        </div>
+    </section>
+
+    <section class="product-container">
+        <h1 style="text-align: center;"> Services: </h1>
+
+        <div class="product">
+            <img src="Massage.png" alt="Massage Services">
+            <img src="Massage1.jpeg" height="175" width="150" alt="Massage Services">
+            <h2>Massage Services</h2>
+            <p>Relax with our professional massages: Swedish, Deep Tissue, Aromatherapy, Hot Stone.</p>
+            <span>Starting at $30</span>
+            <button>Book Now</button>
+        </div>
+
+        <div class="product">
+            <img src="HairWash.jpeg" alt="Hair Washing & Combing">
+            <img src="Hairphoto.jpg" alt="Hair Washing & Combing">
+            <h2>Hair Washing & Combing</h2>
+            <p>Luxurious hair treatment including washing, deep conditioning, and styling.</p>
+            <span>$15</span>
+            <button>Book Now</button>
+        </div>
+
+        <div class="product">
+            <img src="Food1.jpeg" alt="Food Catering">
+            <img src="Food01.jpeg" alt="Food Catering">
+            <img src="Food02.jpeg" alt="Food Catering">
+            <h2>Food Catering Services</h2>
+            <p>Delicious eco-friendly catering for all events using organic ingredients.</p>
+            <span>Custom Pricing</span>
+            <button>Get a Quote</button>
+        </div>
+
+        <div class="product">
+            <img src="Del.jpeg" alt="Delivery Services">
+            <img src="Del01.png" alt="Delivery Services">
+            <h2>Delivery Services</h2>
+            <p>Eco-conscious delivery for your orders, ensuring fast and reliable service.</p>
+            <span>$5 per delivery</span>
+            <button>Order Now</button>
+        </div>
+    </section>
+
+    <section id="checkout-section">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items">No items in cart.</div>
+        <p>Total: <span id="total-price">$0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+        <p id="thank-you-message">Thank you for your purchase! We hope you shop with us again.</p>
+    </section>
+
+    <script>
+        let cart = [];
+
+        // Function to add items to the cart
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            updateCart();
+        }
+
+        // Function to update the cart display
+        function updateCart() {
+            let cartItemsDiv = document.getElementById("cart-items");
+            let totalPriceDiv = document.getElementById("total-price");
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = "No items in cart.";
+                totalPriceDiv.innerHTML = "$0.00";
+            } else {
+                let cartContent = "<ul>";
+                let total = 0;
+                cart.forEach(item => {
+                    cartContent += `<li>${item.name} - $${item.price.toFixed(2)}</li>`;
+                    total += item.price;
+                });
+                cartContent += "</ul>";
+                cartItemsDiv.innerHTML = cartContent;
+                totalPriceDiv.innerHTML = `$${total.toFixed(2)}`;
+            }
+        }
+
+        // Function to handle checkout
+        function checkout() {
+            let cartItemsDiv = document.getElementById("cart-items");
+            let totalPriceDiv = document.getElementById("total-price");
+            let thankYouMessage = document.getElementById("thank-you-message");
+
+            if (cart.length === 0) {
+                alert("Your cart is empty! Please add some items before proceeding to checkout.");
+                return;
+            }
+
+            // Display a receipt
+            let receiptContent = "<h3>Receipt:</h3>";
+            let total = 0;
+            receiptContent += "<ul>";
+            cart.forEach(item => {
+                receiptContent += `<li>${item.name} - $${item.price.toFixed(2)}</li>`;
+                total += item.price;
+            });
+            receiptContent += `</ul><p>Total: $${total.toFixed(2)}</p>`;
+            cartItemsDiv.innerHTML = receiptContent;
+            totalPriceDiv.innerHTML = "";
+
+            // Display a thank you message
+            thankYouMessage.style.display = "block";
+
+            // Clear the cart after checkout
+            cart = [];
+        }
+    </script>
+
+</body>
+</html>
