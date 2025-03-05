@@ -44,18 +44,18 @@
     </div>
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent form from submitting normally
+            event.preventDefault(); 
 
-            // Get input values
+          
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
-            // Sample hardcoded credentials (Replace with a proper authentication system in production)
+          
             var validUsername = "redention";
             var validPassword = "password123";
 
             if (username === validUsername && password === validPassword) {
-                window.location.href = "Products.html"; // Redirect to products page
+                window.location.href = "Products.html"; 
             } else {
                 document.getElementById("error-message").textContent = "Invalid username or password!";
                 document.getElementById("error-message").style.color = "red";
