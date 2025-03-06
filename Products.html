@@ -237,13 +237,13 @@
     <script>
         let cart = [];
 
-        // Function to add items to the cart
+
         function addToCart(productName, price) {
             cart.push({ name: productName, price: price });
             updateCart();
         }
 
-        // Function to update the cart display
+      
         function updateCart() {
             let cartItemsDiv = document.getElementById("cart-items");
             let totalPriceDiv = document.getElementById("total-price");
@@ -264,7 +264,7 @@
             }
         }
 
-        // Function to handle checkout
+    
         function checkout() {
             let cartItemsDiv = document.getElementById("cart-items");
             let totalPriceDiv = document.getElementById("total-price");
@@ -275,7 +275,7 @@
                 return;
             }
 
-            // Display a receipt
+       
             let receiptContent = "<h3>Receipt:</h3>";
             let total = 0;
             receiptContent += "<ul>";
