@@ -130,57 +130,15 @@
             <tbody>
                 <tr>
                     <td>Eco-Friendly Washing Soap</td>
-                    <td>Gentle on skin and the environment, biodegradable formula. Leave your clothes smelling like freshly new Dasies</td>
+                    <td>Gentle on skin and the environment, biodegradable formula. Leave your clothes smelling like freshly new Daisies</td>
                     <td>$5.99</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="5.99" data-name="Eco-Friendly Washing Soap" onclick="updateTotal()"></td>
+                    <td><input type="checkbox" class="item-checkbox" data-price="5.99" onclick="updateTotal()"></td>
                 </tr>
                 <tr>
                     <td>Bamboo Toothpaste</td>
                     <td>Environment friendly made with all Natural ingredients, fluoride-free, sustainable packaging.</td>
                     <td>$7.49</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="7.49" data-name="Bamboo Toothpaste" onclick="updateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Reusable Water Bottle</td>
-                    <td>Durable stainless steel, keeps drinks hot or cold for hours, and is forever reusable.</td>
-                    <td>$12.99</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="12.99" data-name="Reusable Water Bottle" onclick="updateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Reusable Shopping Bag</td>
-                    <td>Stylish, foldable, and made from recycled materials. Other plastic bags have a short lifespan, but not these, these are made from the best silky and durable materials, making them strong and reliable.</td>
-                    <td>$3.99</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="3.99" data-name="Reusable Shopping Bag" onclick="updateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Plant-Based Skincare</td>
-                    <td>Hydrating and nourishing skincare made from organic ingredients.</td>
-                    <td>$15.99</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="15.99" data-name="Plant-Based Skincare" onclick="updateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Massage Services</td>
-                    <td>Relax with our professional massages: Swedish, Deep Tissue, Aromatherapy, Hot Stone.</td>
-                    <td>$30.00</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="30.00" data-name="Massage Services" onclick="updateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Hair Washing & Combing</td>
-                    <td>Luxurious hair treatment including washing, deep conditioning, and styling.</td>
-                    <td>$15.00</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="15.00" data-name="Hair Washing & Combing" onclick="updateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Food Catering Services</td>
-                    <td>Delicious eco-friendly catering for all events using organic ingredients.</td>
-                    <td>Custom Pricing</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="0" data-name="Food Catering Services" onclick="updateTotal()"></td>
-                </tr>
-                <tr>
-                    <td>Delivery Services</td>
-                    <td>Eco-conscious delivery for your orders, ensuring fast and reliable service.</td>
-                    <td>$5.00</td>
-                    <td><input type="checkbox" class="item-checkbox" data-price="5.00" data-name="Delivery Services" onclick="updateTotal()"></td>
+                    <td><input type="checkbox" class="item-checkbox" data-price="7.49" onclick="updateTotal()"></td>
                 </tr>
             </tbody>
         </table>
@@ -207,15 +165,11 @@
                 }
             });
 
-           
             let tax = subtotal * 0.025;
-
-          
             let total = subtotal + tax;
 
-            
             document.getElementById('subtotal-amount').textContent = subtotal.toFixed(2);
-            document.getElementById('tax-amount').textContent = gct.toFixed(2);
+            document.getElementById('tax-amount').textContent = tax.toFixed(2);
             document.getElementById('total-amount').textContent = total.toFixed(2);
         }
     </script>
